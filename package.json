@@ -1,5 +1,5 @@
 {
-  "name": "webpack-test",
+  "name": "webpack-node-vue",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "start": "concurrently \"npm run build\" \"npm run server\""
   },
   "keywords": [],
-  "author": "",
+  "author": "robin__zhao",
   "license": "ISC",
   "dependencies": {
     "koa": "^2.3.0",
