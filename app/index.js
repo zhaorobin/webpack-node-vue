@@ -2,28 +2,52 @@ import Vue from 'vue'
 
 import VueRouter from 'vue-router'
 
+import './http/request.js'
+
+import Register from './components/user/register.vue'
+
+import Login from './components/user/login.vue'
+
+import User from './components/user/user.vue'
+
+import Index from './components/home/index.vue'
+
+import About from './components/home/about.vue'
+
+import Info from './components/home/info.vue'
+
+import Home from './components/home/home.vue'
+
 import App from './components/app.vue'
 
-import Index from './components/index.vue'
+Vue.config.debug = true;//开启错误提示
 
-import About from './components/about.vue'
-
-import Info from './components/info.vue'
-
-
-// Vue.config.debug = true;//开启错误提示
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
     { path: '/', redirect: '/home'},
     {
         path: '/index',
         component: Index,
-        alias: '/home',
         beforeEnter: (to, from, next) => {
             next()
         }
+    },
+    {
+        path: '/user',
+        component: User
+    },
+    {
+        path: '/home',
+        component: Home
+    },
+    {
+        path: '/login',
+        component: Login
+    },
+    {
+        path: '/register',
+        component: Register
     },
     { path: '/about/:id', name: 'about', component: About,
       children: [

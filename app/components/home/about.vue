@@ -3,6 +3,7 @@
         <div>
             <p>{{ message }}</p>
             <button v-on:click="back">back</button>
+            <button v-on:click="test">post</button>
             <router-view></router-view>
         </div>
     </transition>
@@ -17,6 +18,10 @@
         methods: {
             back: function() {
                 this.$router.go(-1)
+            },
+            test: function() {
+                let data = this.post('/api/test');
+                console.log(data);
             }
         }
     }

@@ -1,9 +1,8 @@
 <template>
     <div id="app">
         <p>
-            <router-link to="/index">index</router-link>
-            <router-link :to="{ name: 'about', params: { id: 'foo' }}">about</router-link>
-            <router-link to="/about/foo/test">info</router-link>
+            <router-link to="/home">home</router-link>
+            <router-link to="/user">user</router-link>
         </p>
         <router-view></router-view>
     </div>

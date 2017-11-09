@@ -10,14 +10,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['public']),
         new HtmlWebpackPlugin({
-            title: '开发测试webpack',
+            title: 'webpack-node-vue',
             template: './app/index.html',
             chunksSortMode: 'dependency',
             inject: true,
             filename: '../index.html',
         }),
         new HtmlWebpackPlugin({
-            title: '开发测试webpack',
             template: './app/404.html',
             inject: false,
             filename: '../404.html',
